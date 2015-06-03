@@ -53,6 +53,8 @@ public class RideTest {
 		Date date = new Date();
 		Profile owner = new Profile();
 
+		Ride ride = Ride.createRide(start, finish, date, owner);
+		
 		String updatedStart = "Mishugi";
 		String updatedFinish = "Odessa";
 
@@ -62,8 +64,6 @@ public class RideTest {
 		rideParametersMap.put("finish", updatedFinish);
 		rideParametersMap.put("date", date.toString());
 		rideParametersMap.put("owner", owner.toString());
-
-		Ride ride = Ride.createRide(start, finish, date, owner);
 
 		Assert.assertEquals(rideParametersMap, ride.updateRideParams(ride, rideParametersMap));
 	}

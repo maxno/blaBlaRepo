@@ -43,10 +43,6 @@ public class Ride {
 		return rideParamsMap;
 
 	}
-
-	public void deleteRide() {
-
-	}
 	
 	public void updateRide(Ride ride, HashMap updatedParamsMap){
 		
