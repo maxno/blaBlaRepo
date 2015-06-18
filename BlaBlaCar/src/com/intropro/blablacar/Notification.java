@@ -2,8 +2,8 @@ package com.intropro.blablacar;
 
 public class Notification {
 
-	Ride ride;
-	Request request;
+	private Ride ride;
+	private Request request;
 	
 	public Notification(Ride ride, Request request){
 		
