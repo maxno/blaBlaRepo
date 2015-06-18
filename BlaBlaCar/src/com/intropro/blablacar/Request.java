@@ -5,19 +5,28 @@ public class Request {
 	private Profile owner; 
 	private String status;
 	
-	private void viewRequest(){
+	
+	public Request(Ride ride, Profile requestOwner) {
+		createRequest(ride);
+		this.owner = requestOwner;
+	}
+
+	
+	public void viewRequest(){  // move to Ride class
 		
 	}
 	
-	private void createRequest(){
+	private void createRequest(Ride ride){
+		ride.getRequests().add(this);
+	}
+	
+	public void deleteRequest(Ride ride, Request reuest){
+		
+		ride.getRequests().remove(reuest); // move to Ride class
 		
 	}
 	
-	private void deleteRequest(){
-		
-	}
-	
-	private void notifyRequest(){
+	public void notifyRequest(){
 		
 	}
 

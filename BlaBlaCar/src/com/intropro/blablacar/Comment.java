@@ -7,9 +7,18 @@ public class Comment {
 	private Profile owner;
 	private String body;
 	private Date date;
+	private Ride ride;
 	
-	public void createComment(){
+	public Comment(Ride ride, Profile commentOwner, String body) {
+		this.owner = commentOwner;
+		this.body = body;
+		this.ride = ride;
+		createComment();
+	}
+
+	private void createComment(){
 		
+		ride.getComments().add(this);
 	}
 	
 	public void viewListOfComments(){

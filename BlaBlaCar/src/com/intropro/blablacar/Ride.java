@@ -1,5 +1,6 @@
 package com.intropro.blablacar;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -12,8 +13,8 @@ public class Ride {
 	private Date date;
 	private String status;
 	private Profile owner;
-	private List<Comment> comments;
-	private List<Request> requests;
+	private List<Comment> comments = new ArrayList<Comment>();
+	private List<Request> requests = new ArrayList<Request>();
 
 	private Ride() {
 

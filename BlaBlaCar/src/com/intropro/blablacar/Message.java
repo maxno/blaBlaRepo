@@ -6,15 +6,25 @@ public class Message {
 	
 	private Profile from;
 	private Profile to;
-	private Date date;
+	private Date date = new Date();
 	private String body;
-
-	public void sendMessage() {
-		
+	
+	public Message(Profile to, Profile from, String body){
+	
+	this.to = to;
+	this.from = from;
+	this.body = body;
+	sendMessage();
+	notyfyRecivier();
+	
 	}
 	
-	public void notyfyRecivier() {
-		
+	private void sendMessage() {
+		to.getMessages().add(this);
+	}
+	
+	private void notyfyRecivier() {
+		to.setMessageCounter(to.getMessageCounter() + 1);
 	}
 
 	public Profile getFrom() {

@@ -22,6 +22,8 @@ public class RideTest {
 		Ride ride = Ride.createRide(start, finish, date, owner);
 
 		assertNotNull(ride);
+		
+		assertEquals(owner, ride.getOwner());
 	}
 
 	@Test
